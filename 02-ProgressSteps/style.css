@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+* {
+    box-sizing : border-box;
+}
+
+body {
+    font-family     : 'Muli', sans-serif;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    height          : 100vh;
+    overflow        : hidden;
+    margin          : 0;
+}
+
+.container {
+    text-align : center;
+}
+
+.progress-container {
+    display         : flex;
+    justify-content : space-between;
+    position        : relative;
+    max-width       : 100%;
+    width           : 300px;
+    margin-bottom   : 30px;
+}
+
+.progress-container::before {
+    content    : '';
+    background : lightgrey;
+    height     : 4px;
+    left       : 0;
+    position   : absolute;
+    top        : 50%;
+    transform  : translateY(-50%);
+    width      : 100%;
+    z-index    : -1;
+}
+
+.progress {
+    background : dodgerblue;
+    height     : 4px;
+    left       : 0;
+    position   : absolute;
+    top        : 50%;
+    transform  : translateY(-50%);
+    transition : .4s ease;
+    width      : 0;
+    z-index    : -1;
+}
+.circle {
+    font             : 700 1rem Muli;
+    background-color : white;
+    color            : #8F6E9FFF;
+    border-radius    : 50%;
+    height           : 30px;
+    width            : 30px;
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    border           : 3px solid none;
+    transition       : 0.4s ease;
+
+}
+
+
+/* Buttons */
+.btn {
+    background-color : #8F6E9FFF;
+    color            : white;
+    border           : none;
+    border-radius    : 6px;
+    cursor           : pointer;
+    font-family      : inherit;
+    padding          : 8px 30px;
+    margin           : 5px;
+    font-size        : 14px;
+
+}
+
+.btn:active {
+    transform : scale(0.98);
+}
+
+.btn:focus {
+    outline : none;
+}
+
+.btn:disabled {
+    background-color : grey;
+    cursor           : not-allowed;
+}
+
